@@ -1,15 +1,15 @@
 #Internal package file, do not edit.
-#Tue Jun 25 06:21:17 CST 2019
-1.base=C\:\\Users\\danie\\Desktop\\Ecologic\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
-2.path=classes2.dex
+#Tue Jun 25 10:50:30 CST 2019
+1.base=C\:\\Users\\erikr\\Documents\\proyectolindo\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.path=classes.dex
 0.baseType=DIRECTORY
-2.base=C\:\\Users\\danie\\Desktop\\Ecologic\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.base=C\:\\Users\\erikr\\Documents\\proyectolindo\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 2.set=DEX
 1.baseType=DIRECTORY
 count=3
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Users\\danie\\Desktop\\Ecologic\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+0.base=C\:\\Users\\erikr\\Documents\\proyectolindo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
 2.baseType=DIRECTORY
-1.path=classes.dex
+1.path=classes2.dex

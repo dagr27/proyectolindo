@@ -22,20 +22,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val reg = findViewById(R.id.reg) as Button
         val log = findViewById(R.id.log) as Button
-        val type:TextView = findViewById(R.id.type_main)
         /*Verificar Sesioon*/
-        if(FirebaseAuth.getInstance().currentUser != null){
+        if (FirebaseAuth.getInstance().currentUser != null) {
             Toast.makeText(this, FirebaseAuth.getInstance().currentUser!!.email, Toast.LENGTH_LONG).show()
-            FirebaseFirestore.getInstance().collection("users").whereEqualTo("email",FirebaseAuth.getInstance().currentUser!!.email)
-                .get().addOnCompleteListener{ task ->
-                    if(task.isSuccessful){
-                        for (document in task.result!!){
-                            type.text = document["type"].toString()
+            FirebaseFirestore.getInstance().collection("users")
+                .whereEqualTo("email", FirebaseAuth.getInstance().currentUser!!.email)
+                .get().addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        for (document in task.result!!) {
+                            if (document["type"] == 0) {
+                                startActivity(Intent(this, SupHome::class.java))
+                            } else {
+                                startActivity(Intent(this, UserActivity::class.java))
+                            }
                         }
                     }
                 }
-            if(type.text.toString().toInt()==0)startActivity(Intent(this, SupHome::class.java)) else startActivity(Intent(this, UserActivity::class.java))
-
         }
 
         reg.setOnClickListener {

@@ -11,6 +11,7 @@
         <action android:id="@+id/action_ideas" app:destination="@id/ideaFragment"/>
         <action android:id="@+id/action_homeFragment_to_eventFragment" app:destination="@id/eventFragment"/>
         <action android:id="@+id/action_tour" app:destination="@id/tourFragment"/>
+        <action android:id="@+id/action_homeFragment_to_logoutFragment2" app:destination="@id/logoutFragment"/>
     </fragment>
     <fragment android:id="@+id/settingFragment" android:name="com.example.ecologic.fragments.SettingFragment"
               android:label="SettingFragment"/>
@@ -28,4 +29,6 @@
               android:label="EventFragment"/>
     <fragment android:id="@+id/tourFragment" android:name="com.example.ecologic.fragments.TourFragment"
               android:label="fragment_tour" tools:layout="@layout/fragment_tour"/>
+    <fragment android:id="@+id/logoutFragment" android:name="com.example.ecologic.fragments.LogoutFragment"
+              android:label="fragment_logout" tools:layout="@layout/fragment_logout"/>
 </navigation>

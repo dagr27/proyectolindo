@@ -27,7 +27,7 @@ class ChallengeFragment : Fragment() {
     private lateinit var viewManager: RecyclerView.LayoutManager
     private var challengeList: ArrayList<Challenge> = ArrayList()
 
-    val user = "erikrenderos"
+    var user:String = arguments?.getString("username")!!
     val db = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
