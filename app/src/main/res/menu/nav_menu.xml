@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="nav_view">
+    <group android:checkableBehavior="single" android:id="@+id/id_menu_countries">
+        <item
+                android:id="@+id/homeFragment"
+                android:icon="@drawable/ic_home_black_24dp"
+                android:checked="true"
+                android:title="@string/title_home"/>
+        <item
+                android:id="@+id/eventFragment"
+                android:icon="@drawable/calendar"
+                android:title="@string/title_events"/>
+        <item
+                android:id="@+id/blogFragment"
+                android:icon="@drawable/ic_dashboard_black_24dp"
+                android:title="@string/title_blog"/>
+
+        <item
+                android:id="@+id/ideaFragment"
+                android:icon="@drawable/light"
+                android:title="@string/title_ideas"/>
+
+        <item
+                android:id="@+id/tourFragment"
+                android:icon="@drawable/report"
+                android:title="@string/title_reports"/>
+    </group>
+
+    <item android:title="Extras">
+        <!-- TODO (3.7) Debe definirse un menu -->
+        <menu>
+            <!-- TODO (3.7) Y lo elementos que lo conforman -->
+            <item
+                    android:id="@+id/settingFragment"
+                    android:title="@string/title_settings"/>
+            <item
+                    android:id="@+id/nav_send"
+                    android:title="@string/title_logout"/>
+        </menu>
+    </item>
+</menu>

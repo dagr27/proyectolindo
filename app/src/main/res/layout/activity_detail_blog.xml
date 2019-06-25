@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.DetailBlog">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarviewer"
+            android:layout_width="match_parent"
+
+            android:layout_height="256dp"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarLayout"
+                android:layout_width="match_parent"
+                app:expandedTitleTextAppearance="@style/Toolbar.TitleText"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:title="El Salvador"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                    android:id="@+id/iv_db"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"/>
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarviewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="La ecología es la rama de la biología"
+                      android:textSize="20dp"
+                      android:id="@+id/tv_db_title"
+                      android:fontFamily="@font/bold"
+                      android:textColor="#000"
+                      android:padding="2dp"
+                      android:layout_margin="10dp"/>
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="22/06/2019"
+                          android:textSize="15dp"
+                          android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_db_description"
+                    android:text="La ecología es la rama de la biología que estudia las relaciones de los diferentes seres vivos entre sí y con su entorno: «la biología de los ecosistemas» (Margalef, 1998, p. 2). Estudia cómo estas interacciones entre los organismos y su ambiente afectan a propiedades como la distribución o la abundancia. En el ambiente se incluyen las propiedades físicas y químicas que pueden ser descritas como la suma de factores organismos que comparten ese hábitat (factores bióticos)."
+                    android:textSize="16dp"
+                    android:textColor="#000"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

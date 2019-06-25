@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "472037982939",
+    "firebase_url": "https://ecologic-a7174.firebaseio.com",
+    "project_id": "ecologic-a7174",
+    "storage_bucket": "ecologic-a7174.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472037982939:android:e22b93ff5b4a3d7c",
+        "android_client_info": {
+          "package_name": "com.example.ecologic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472037982939-bf5p89nudjuedf9t6hgiigip2e29qgok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvsEM1mCawkrY5PiXzqk7a4tKWrsOJ87A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472037982939-bf5p89nudjuedf9t6hgiigip2e29qgok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

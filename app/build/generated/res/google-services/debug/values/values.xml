@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">472037982939-bf5p89nudjuedf9t6hgiigip2e29qgok.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://ecologic-a7174.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">472037982939</string>
+    <string name="google_api_key" translatable="false">AIzaSyBvsEM1mCawkrY5PiXzqk7a4tKWrsOJ87A</string>
+    <string name="google_app_id" translatable="false">1:472037982939:android:e22b93ff5b4a3d7c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBvsEM1mCawkrY5PiXzqk7a4tKWrsOJ87A</string>
+    <string name="google_storage_bucket" translatable="false">ecologic-a7174.appspot.com</string>
+    <string name="project_id" translatable="false">ecologic-a7174</string>
+</resources>

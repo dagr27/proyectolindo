@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="5dp">
+    <LinearLayout android:orientation="vertical"
+                  android:id="@+id/card_event"
+                  android:layout_width="220dp"
+                  android:background="#fff"
+                  android:layout_marginRight="15dp"
+                  android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_e_preview"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/wallpaper"
+                android:scaleType="fitXY"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/tv_e_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15 julio"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="10dp"/>
+
+                <TextView
+                        android:id="@+id/tv_e_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:text="15 participantes"
+
+                        android:textSize="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_e_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hola"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="13dp"/>
+
+            <TextView
+                    android:id="@+id/tv_e_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="The android ScrollView is having property called."
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12dp"/>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/img_c"
+                    android:layout_width="14dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/go"/>
+
+            <TextView
+                    android:id="@+id/btn_e_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:text="ASISTIRE"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

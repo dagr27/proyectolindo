@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Ecológic</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_challenges">Retos</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_events">Eventos</string>
+    <string name="title_blog">Blog</string>
+    <string name="title_ideas">Ideas</string>
+    <string name="title_reports">Reportes</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_logout">Cerrar sesion</string>
+    <string name="title_settings">Configuracion</string>
+    <string name="email">email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail_blog">DetailBlog</string>
+    <string name="title_activity_add_idea">AddIdeaActivity</string>
+    <string name="title_activity_detail_idea">DetailIdea</string>
+    <string name="title_activity_detail_event">DetailEvent</string>
+    <string name="title_activity_add_event">AddEvent</string>
+    <string name="title_activity_success">SuccessActivity</string>
+    <string name="title_activity_detail_tour">DetailTour</string>
+    <string name="title_activity_add_coment">AddComent</string>
+    <string name="title_activity_user">UserActivity</string>
+</resources>

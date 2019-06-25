@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#32b847</color>
+    <color name="colorPrimaryDark">#008716</color>
+    <color name="colorAccent">#32b847</color>
+
+    // PROGRESS BAR
+    <color name="colorRed">#ff3e32</color>
+    <color name="colorOrange">#ff5a1f</color>
+    <color name="colorGreen">#32b847</color>
+    <color name="colorBlue">#02a2d9</color>
+
+    <color name="colorDark">#141d29</color>
+    <color name="subDark">#1c2738</color>
+    <color name="textDark">#fff</color>
+</resources>
