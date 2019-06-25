@@ -15,6 +15,7 @@ import com.example.ecologic.activities.AddEvent
 import com.example.ecologic.activities.DetailEvent
 import com.example.ecologic.adapters.*
 import com.example.ecologic.entities.Event
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.card_event.*
@@ -32,7 +33,6 @@ class EventFragment : Fragment() {
     private var youList: ArrayList<Event> = ArrayList<Event>()
 
     var db = FirebaseFirestore.getInstance()
-    var user = "erikrenderos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +44,9 @@ class EventFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         db.collection("events")
             .orderBy("count", Query.Direction.DESCENDING).limit(5)

@@ -43,7 +43,6 @@ class UserAdapter (var list:ArrayList<User>):RecyclerView.Adapter<UserAdapter.Vi
                 enable.isChecked = true
             }
             user.text=data.username
-            email.text=data.email
 
             enable?.setOnCheckedChangeListener { _, isChecked ->
                 if(isChecked) {

@@ -13,6 +13,7 @@ import com.example.ecologic.entities.Event
 import com.example.ecologic.entities.Idea
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
@@ -33,17 +34,18 @@ class AddEvent : AppCompatActivity() {
     var storageReference = FirebaseStorage.getInstance().reference
     var db = FirebaseFirestore.getInstance()
 
-    var user = "erikrenderos"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
         setSupportActionBar(toolbar)
 
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
+
         btn_e_selectImage.setOnClickListener { launchGallery() }
 
         btn_e_publish.setOnClickListener {
-            uploadImage()
+            uploadImage(user)
             Toast.makeText(this, "Evento creado con exito.", Toast.LENGTH_SHORT).show()
             finish()
         }
@@ -80,7 +82,7 @@ class AddEvent : AppCompatActivity() {
         }
     }
 
-    private fun addUploadRecordToDb(uri: String) {
+    private fun addUploadRecordToDb(user: String, uri: String) {
         val event =
             Event(et_e_title.text.toString(), et_e_description.text.toString(), uri, et_e_date.text.toString(), 0,user)
 
@@ -88,7 +90,7 @@ class AddEvent : AppCompatActivity() {
             .add(event)
     }
 
-    private fun uploadImage() {
+    private fun uploadImage(user: String) {
         if (filePath != null) {
             val ref = storageReference.child("events/" + UUID.randomUUID().toString())
             val uploadTask = ref.putFile(filePath!!)
@@ -103,7 +105,7 @@ class AddEvent : AppCompatActivity() {
             }).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val downloadUri = task.result
-                    addUploadRecordToDb(downloadUri.toString())
+                    addUploadRecordToDb(user, downloadUri.toString())
                 }
             }.addOnFailureListener {
 

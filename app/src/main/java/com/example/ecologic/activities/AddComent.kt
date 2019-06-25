@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.ecologic.R
 import com.example.ecologic.entities.Coment
 import com.example.ecologic.entities.Tour
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_add_coment.*
 import kotlinx.android.synthetic.main.activity_add_idea.toolbar
@@ -15,12 +16,14 @@ import java.util.*
 
 class AddComent : AppCompatActivity() {
     var db = FirebaseFirestore.getInstance()
-    var user = "erikrenderos"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_coment)
         setSupportActionBar(toolbar)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         val extras = intent.extras
         tv_t_place.text = extras.getString("COMENT")

@@ -7,12 +7,12 @@ import com.bumptech.glide.Glide
 import com.example.ecologic.R
 import com.example.ecologic.entities.Event
 import com.example.ecologic.fragments.HomeFragment
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 import kotlinx.android.synthetic.main.activity_detail_event.*
 
 class DetailEvent : AppCompatActivity() {
-    val user = "erikrenderos"
     val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +20,9 @@ class DetailEvent : AppCompatActivity() {
         setContentView(R.layout.activity_detail_event)
         val reciever: Event = intent?.extras?.getParcelable("EVENT") ?: Event()
         init(reciever)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         db.collection("events").whereEqualTo("title", tv_de_title.text.toString())
             .get()

@@ -19,25 +19,14 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class UserActivity : AppCompatActivity() {
-    var user:String = "erikrenderos"
+    val mAuth= FirebaseAuth.getInstance()
+    val user = mAuth.currentUser!!.email.toString()
     val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_home)
-        val mAuth= FirebaseAuth.getInstance()
-        val email = mAuth.currentUser!!.email.toString()
-        val data = FirebaseFirestore.getInstance().collection("users").whereEqualTo("email",email.toString())
-            .get().addOnCompleteListener{ task ->
-                if(task.isSuccessful){
-                    for (document in task.result!!){
-                        user = document["username"].toString()
-                    }
-                }
-            }
-
-        /*Aqui empieza lo tuyo lo de arriba es mio para obtener el user*/
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
@@ -62,16 +51,16 @@ class UserActivity : AppCompatActivity() {
             .addOnCompleteListener { user ->
                 if (user.isSuccessful) {
                     val document = user.result
-                    val user = document?.toObject(User::class.java)
+                    val userData = document?.toObject(User::class.java)
 
-                    tv_username.text = document?.id
-                    tv_email.text = user?.email
+                    tv_username.text = userData?.name + " " + userData?.lastname
+                    tv_email.text = document?.id
 
                     Glide.with(this)
-                        .load(user?.profilePicture)
+                        .load(userData?.profilePicture)
                         .into(profile_image)
 
-                    plant(user?.lastDate)
+                    plant(userData?.lastdate)
                 }
             }
     }

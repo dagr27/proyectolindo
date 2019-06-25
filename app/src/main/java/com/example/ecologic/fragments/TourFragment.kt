@@ -13,6 +13,7 @@ import com.example.ecologic.R
 import com.example.ecologic.activities.DetailTour
 import com.example.ecologic.adapters.*
 import com.example.ecologic.entities.Tour
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.card_tour.view.*
 import kotlinx.android.synthetic.main.fragment_tour.*
@@ -34,6 +35,8 @@ class TourFragment : Fragment() {
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
         var db = FirebaseFirestore.getInstance()
 
         db.collection("touristPlaces")

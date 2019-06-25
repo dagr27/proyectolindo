@@ -12,6 +12,7 @@ import com.example.ecologic.R
 import com.example.ecologic.entities.Idea
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
@@ -30,17 +31,18 @@ class AddIdea : AppCompatActivity() {
     var storageReference = FirebaseStorage.getInstance().reference
     var db = FirebaseFirestore.getInstance()
 
-    var user = "erikrenderos"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_idea)
         setSupportActionBar(toolbar)
 
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
+
         btn_i_selectImage.setOnClickListener { launchGallery() }
 
         btn_i_publish.setOnClickListener {
-            uploadImage()
+            uploadImage(user)
             Toast.makeText(this, "Post publicado con exito.", Toast.LENGTH_SHORT).show()
             finish()
         }
@@ -77,7 +79,7 @@ class AddIdea : AppCompatActivity() {
         }
     }
 
-    private fun addUploadRecordToDb(uri: String) {
+    private fun addUploadRecordToDb(user: String, uri: String) {
 
         val sdf = SimpleDateFormat("dd/M/yyyy")
         val currentDate = sdf.format(Date())
@@ -88,7 +90,7 @@ class AddIdea : AppCompatActivity() {
             .add(idea)
     }
 
-    private fun uploadImage() {
+    private fun uploadImage(user: String) {
         if (filePath != null) {
             val ref = storageReference.child("ideas/" + UUID.randomUUID().toString())
             val uploadTask = ref.putFile(filePath!!)
@@ -103,7 +105,7 @@ class AddIdea : AppCompatActivity() {
             }).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val downloadUri = task.result
-                    addUploadRecordToDb(downloadUri.toString())
+                    addUploadRecordToDb(user, downloadUri.toString())
                 }
             }.addOnFailureListener {
 

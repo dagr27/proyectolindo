@@ -16,6 +16,7 @@ import com.example.ecologic.R
 import com.example.ecologic.activities.DetailBlog
 import com.example.ecologic.adapters.*
 import com.example.ecologic.entities.Blog
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.card_blog.*
 import kotlinx.android.synthetic.main.card_blog.view.*
@@ -38,6 +39,9 @@ class BlogFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         var db = FirebaseFirestore.getInstance()
 

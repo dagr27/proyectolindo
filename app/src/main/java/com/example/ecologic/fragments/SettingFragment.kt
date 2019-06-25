@@ -24,6 +24,7 @@ import java.io.IOException
 import java.util.*
 import kotlin.collections.HashMap
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 
 class SettingFragment : Fragment() {
     private val PICK_IMAGE_REQUEST = 71
@@ -32,8 +33,6 @@ class SettingFragment : Fragment() {
     var firebaseStore = FirebaseStorage.getInstance()
     var storageReference = FirebaseStorage.getInstance().reference
     var db = FirebaseFirestore.getInstance()
-
-    var user = "erikrenderos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,25 +45,28 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        db.collection("users")
-            .whereEqualTo("email", "erikrenderos@gmail.com")
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
+
+        db.collection("users").document(user)
             .get()
             .addOnCompleteListener { users ->
                 if (users.isSuccessful) {
-                    for (document in users.result!!) {
+                    var document = users.result!!
+
                         val user = document.toObject(User::class.java)
-                        et_email.setText(user.email)
-                        et_name.setText(user.name)
-                        et_lastName.setText(user.lastName)
+                        et_email.setText(document.id)
+                        et_name.setText(user?.name)
+                        et_lastName.setText(user?.lastname)
 
                         Glide.with(this)
-                            .load(user.profilePicture)
+                            .load(user?.profilePicture)
                             .into(preview_image)
 
-                        if (user.status == 1) {
+                        if (user?.status == 1) {
                             switchMode.isChecked = true
                         }
-                    }
+
                 }
             }
 
@@ -91,11 +93,9 @@ class SettingFragment : Fragment() {
 
             db.collection("users").document(user)
                 .update(
-                    "email",
-                    et_email.text.toString(),
                     "name",
                     et_name.text.toString(),
-                    "lastName",
+                    "lastname",
                     et_lastName.text.toString(),
                     "status", mode
                 )
@@ -111,7 +111,7 @@ class SettingFragment : Fragment() {
                     }
                 }
 
-            uploadImage()
+            uploadImage(user)
 
             Toast.makeText(context, "Perfil actualizado correctamente.", Toast.LENGTH_SHORT).show()
 
@@ -147,7 +147,7 @@ class SettingFragment : Fragment() {
         }
     }
 
-    private fun addUploadRecordToDb(uri: String) {
+    private fun addUploadRecordToDb(user: String, uri: String) {
         val data = HashMap<String, Any>()
         data["profilePicture"] = uri
 
@@ -155,7 +155,7 @@ class SettingFragment : Fragment() {
             .update(data)
     }
 
-    private fun uploadImage() {
+    private fun uploadImage(user: String) {
         if (filePath != null) {
             val ref = storageReference.child("users/" + UUID.randomUUID().toString())
             val uploadTask = ref.putFile(filePath!!)
@@ -170,7 +170,7 @@ class SettingFragment : Fragment() {
             }).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val downloadUri = task.result
-                    addUploadRecordToDb(downloadUri.toString())
+                    addUploadRecordToDb(user, downloadUri.toString())
                 }
             }.addOnFailureListener {
 

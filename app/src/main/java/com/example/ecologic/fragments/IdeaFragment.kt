@@ -16,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import android.view.View.OnClickListener
 import com.example.ecologic.activities.AddIdea
 import com.example.ecologic.activities.DetailIdea
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.card_idea.*
 import kotlinx.android.synthetic.main.card_idea.view.*
 import kotlinx.android.synthetic.main.fragment_idea.*
@@ -25,8 +26,6 @@ class IdeaFragment : Fragment() {
     private lateinit var viewAdapter: IdeaAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private var ideaList: ArrayList<Idea> = ArrayList()
-
-    var user = "erikrenderos"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +37,9 @@ class IdeaFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         val db = FirebaseFirestore.getInstance()
 

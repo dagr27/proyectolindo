@@ -20,6 +20,7 @@ import com.example.ecologic.adapters.*
 import com.example.ecologic.entities.Event
 import com.example.ecologic.entities.Plant
 import com.example.ecologic.entities.UserXChallenge
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.card_event.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -31,8 +32,6 @@ class HomeFragment : Fragment() {
     private lateinit var viewAdapter: EventAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private var eventList: ArrayList<Event> = ArrayList<Event>()
-
-    var user = "erikrenderos"
 
     var db = FirebaseFirestore.getInstance()
 
@@ -46,6 +45,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mAuth= FirebaseAuth.getInstance()
+        val user = mAuth.currentUser!!.email.toString()
 
         view.findViewById<View>(R.id.btn_challenges)
             .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_challenges))
@@ -213,7 +215,7 @@ class HomeFragment : Fragment() {
                         v.tv_h_water.text.toString().substring(0, v.tv_h_water.text.toString().length - 1).toInt()
                     val love = v.tv_h_love.text.toString().substring(0, v.tv_h_love.text.toString().length - 1).toInt()
 
-                    points(sun, water, love)
+                    points(user, sun, water, love)
 
                     startActivity(Intent(this.context, SuccessActivity::class.java))
 
@@ -238,7 +240,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun points(sun: Int, water: Int, love: Int) {
+    private fun points(user: String, sun: Int, water: Int, love: Int) {
         db.collection("users").document(user).collection("plants")
             .get()
             .addOnCompleteListener { task ->

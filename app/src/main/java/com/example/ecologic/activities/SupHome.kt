@@ -54,7 +54,7 @@ class SupHome : AppCompatActivity() {
                     var email1 = document["email"]
                     var status  = document["status"].toString().toInt()
                     /*username:String, name: String, lastName: String, password: String, email: String, profilePicture: String, status: Int, lastDate: String, type: Int*/
-                    users.add(User(user1,"","","", email1.toString(),"",status, "" ,document["type"].toString().toInt()))
+                    users.add(User(user1,"","","","",status, "" ,document["type"].toString().toInt()))
                 }
                 val adapter = UserAdapter(users)
                 Recycler.layoutManager=GridLayoutManager(this,2)
