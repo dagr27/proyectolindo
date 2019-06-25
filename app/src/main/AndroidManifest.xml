@@ -11,9 +11,11 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity android:name=".Login"/>
-        <activity android:name=".Register"/>
+            android:theme="@style/AppThemeNo">
+        <activity android:name=".Login"
+                  android:theme="@style/AppThemeNo"/>
+        <activity android:name=".Register"
+                  android:theme="@style/AppThemeNo"/>
         <activity android:name=".Tourism">
         </activity>
         <activity android:name=".userData">

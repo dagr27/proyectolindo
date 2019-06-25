@@ -1668,7 +1668,6 @@ layout fragment_challenge
 layout fragment_event
 layout fragment_home
 layout fragment_idea
-layout fragment_logout
 layout fragment_setting
 layout fragment_tour
 layout header_nav
@@ -1819,6 +1818,7 @@ style AppTheme
 style AppTheme_AppBarOverlay
 style AppTheme_NoActionBar
 style AppTheme_PopupOverlay
+style AppThemeNo
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
