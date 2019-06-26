@@ -197,39 +197,6 @@ class HomeFragment : Fragment() {
                         }
                     }.addOnFailureListener {}
             }
-
-            v.daily_challenge.setOnClickListener {
-                val builder = AlertDialog.Builder(v.context)
-                builder.setTitle(v.tv_h_title.text)
-                builder.setMessage("¿Seguro que ya completaste este reto?")
-                builder.setPositiveButton("Si") { dialogInterface: DialogInterface, i: Int ->
-
-                    db.collection("challenges").whereEqualTo("title", v.tv_h_title.text.toString())
-                        .get()
-                        .addOnCompleteListener { challenges ->
-                            for (document in challenges.result!!) {
-                                val userXchallenge = UserXChallenge(document.id)
-                                db.collection("users").document(user).collection("challenges").document(document.id)
-                                    .set(userXchallenge)
-                            }
-                        }
-
-                    val sun = v.tv_h_sun.text.toString().substring(0, v.tv_h_sun.text.toString().length - 1).toInt()
-                    val water =
-                        v.tv_h_water.text.toString().substring(0, v.tv_h_water.text.toString().length - 1).toInt()
-                    val love = v.tv_h_love.text.toString().substring(0, v.tv_h_love.text.toString().length - 1).toInt()
-
-                    points(user, sun, water, love)
-
-                    startActivity(Intent(this.context, SuccessActivity::class.java))
-
-                    val ft = fragmentManager?.beginTransaction()
-                    ft?.replace(R.id.fragment, HomeFragment())?.addToBackStack(null)?.commit()
-                }
-
-                builder.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
-                builder.show()
-            }
         }
 
         viewAdapter = EventAdapter(eventList, click)

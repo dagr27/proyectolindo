@@ -30,9 +30,9 @@ class MainActivity : AppCompatActivity() {
                 .get().addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         for (document in task.result!!) {
-                            if (document["type"] == 0) {
+                            if (document["type"].toString() == "1") {
                                 startActivity(Intent(this, SupHome::class.java))
-                            } else if(document["type"] == 1) {
+                            } else if(document["type"].toString() == "0") {
                                 startActivity(Intent(this, UserActivity::class.java))
                             }
                         }

@@ -45,7 +45,7 @@ class EventFragment : Fragment() {
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mAuth= FirebaseAuth.getInstance()
+        val mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
 
         db.collection("events")
@@ -54,10 +54,17 @@ class EventFragment : Fragment() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (document in task.result!!) {
-                        val event = document.toObject(Event::class.java)
-                        bestList.add(event)
+                        db.collection("events").document(document.id)
+                            .get().addOnCompleteListener { task2 ->
+                                val document2 = task2.result
+                                if (document2!!.exists()) {
+                                } else {
+                                    val event = document.toObject(Event::class.java)
+                                    bestList.add(event)
+                                }
+                                viewAdapter.setData(bestList)
+                            }
                     }
-                    viewAdapter.setData(bestList)
                 }
             }
 
@@ -66,10 +73,17 @@ class EventFragment : Fragment() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (document in task.result!!) {
-                        val event = document.toObject(Event::class.java)
-                        youList.add(event)
+                        db.collection("events").document(document.id)
+                            .get().addOnCompleteListener { task2 ->
+                                val document2 = task2.result
+                                if (document2!!.exists()) {
+                                } else {
+                                    val event = document.toObject(Event::class.java)
+                                    youList.add(event)
+                                }
+                                viewAdapter.setData(youList)
+                            }
                     }
-                    viewAdapter2.setData(youList)
                 }
             }
 
