@@ -215,7 +215,7 @@ class ChallengeFragment : Fragment() {
                     var love = love + plant.love
                     if(love > 100){love = 100}
 
-                    var level = plant.level + 2
+                    var level = plant.level + 1
 
                     db.collection("users").document(user).collection("plants").document(document.id)
                         .update("sun", sun, "water", water, "love", love, "level", level)

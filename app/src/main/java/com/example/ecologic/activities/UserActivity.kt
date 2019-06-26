@@ -85,7 +85,7 @@ class UserActivity : AppCompatActivity() {
                         var sun = plant.love - 10
                         var water = plant.love - 10
                         var love = plant.love - 10
-                        var level = plant.level + 5
+                        var level = plant.level + 1
 
                         db.collection("users").document(user).collection("plants").document(document.id)
                             .update("sun", sun, "water", water, "love", love, "level", level)
@@ -98,11 +98,10 @@ class UserActivity : AppCompatActivity() {
                         var sun = plant.love - 15
                         var water = plant.love - 15
                         var love = plant.love - 15
-                        var level = plant.level + 5
 
 
                         db.collection("users").document(user).collection("plants").document(document.id)
-                            .update("sun", sun, "water", water, "love", love, "level", level)
+                            .update("sun", sun, "water", water, "love", love)
 
                         db.collection("users").document(user)
                             .update("lastDate", currentDate)

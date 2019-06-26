@@ -1210,6 +1210,7 @@ id action_detail_blog
 id action_divider
 id action_homeFragment_to_eventFragment
 id action_homeFragment_to_logoutFragment2
+id action_homeFragment_to_logoutFragment22
 id action_ideas
 id action_image
 id action_logout
@@ -1400,7 +1401,6 @@ id navigation_header_container
 id never
 id none
 id normal
-id notificationFragment
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -1539,7 +1539,9 @@ id tv_e_description
 id tv_e_title
 id tv_email
 id tv_events
+id tv_h_day
 id tv_h_love
+id tv_h_mes
 id tv_h_sun
 id tv_h_title
 id tv_h_water
@@ -1668,6 +1670,7 @@ layout fragment_challenge
 layout fragment_event
 layout fragment_home
 layout fragment_idea
+layout fragment_logout
 layout fragment_setting
 layout fragment_tour
 layout header_nav

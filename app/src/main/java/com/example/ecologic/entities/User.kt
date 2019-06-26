@@ -1,6 +1,7 @@
 package com.example.ecologic.entities
 
 class User(){
+    lateinit var username:String
     lateinit var name: String
     lateinit var lastname: String
     lateinit var password: String
@@ -9,7 +10,8 @@ class User(){
     lateinit var lastdate: String
     var type: Int = 0
 
-    constructor(name: String, lastname: String, password: String, profilePicture: String, status: Int, lastDate: String, type: Int): this() {
+    constructor(username:String, name: String, lastname: String, password: String, profilePicture: String, status: Int, lastDate: String, type: Int): this() {
+        this.username = username
         this.name = name
         this.lastname = lastname
         this.password = password

@@ -29,9 +29,10 @@ class Login:AppCompatActivity() {
                             .get().addOnCompleteListener{ tasks ->
                                 if(tasks.isSuccessful){
                                     for (document in tasks.result!!){
-                                        if(document["type"] == 0 && document["status"] == 1){
+                                        
+                                        if(document["type"] == "1" && document["status"] == "1"){
                                             startActivity(Intent(this, SupHome::class.java))
-                                        }else if (document["type"] == 1 && document["status"] == 1){
+                                        }else if (document["type"] == "0" && document["status"] == "1"){
                                             startActivity(Intent(this, UserActivity::class.java))
                                         }else{
                                             Toast.makeText(this, "Su cuenta no se encuentra activa, pero registrada, contactar al Administrador",Toast.LENGTH_LONG).show()
