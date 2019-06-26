@@ -54,7 +54,7 @@ class EventFragment : Fragment() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (document in task.result!!) {
-                        db.collection("events").document(document.id)
+                        db.collection("users").document(user).collection("events").document(document.id)
                             .get().addOnCompleteListener { task2 ->
                                 val document2 = task2.result
                                 if (document2!!.exists()) {
@@ -73,7 +73,7 @@ class EventFragment : Fragment() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (document in task.result!!) {
-                        db.collection("events").document(document.id)
+                        db.collection("users").document(user).collection("events").document(document.id)
                             .get().addOnCompleteListener { task2 ->
                                 val document2 = task2.result
                                 if (document2!!.exists()) {

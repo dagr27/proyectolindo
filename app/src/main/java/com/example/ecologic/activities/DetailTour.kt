@@ -46,7 +46,7 @@ class DetailTour : AppCompatActivity() {
             .addOnCompleteListener { events ->
                 for (document in events.result!!) {
                     db.collection("coments")
-                        .whereEqualTo("idTour", document.id).orderBy("date", Query.Direction.ASCENDING)
+                        .whereEqualTo("idTour", document.id)
                         .get()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
