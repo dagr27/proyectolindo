@@ -43,17 +43,18 @@ class UserAdapter (var list:ArrayList<User>):RecyclerView.Adapter<UserAdapter.Vi
                 enable.isChecked = true
             }
             user.text=data.username
+            email.text = data.email
 
             enable?.setOnCheckedChangeListener { _, isChecked ->
                 if(isChecked) {
-                    db.collection("users").document(data.username)
+                    db.collection("users").document(data.email)
                         .update("status", 1)
                         .addOnSuccessListener {
                             Toast.makeText(itemView.context, "YES", Toast.LENGTH_LONG).show()
                         }
 
                 }else{
-                    db.collection("users").document(data.username)
+                    db.collection("users").document(data.email)
                         .update("status", 0)
                         .addOnSuccessListener {
                             Toast.makeText(itemView.context, "YES", Toast.LENGTH_LONG).show()

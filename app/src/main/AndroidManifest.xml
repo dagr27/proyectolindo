@@ -12,10 +12,14 @@
             android:roundIcon="@mipmap/ic_launcher"
             android:supportsRtl="true"
             android:theme="@style/AppThemeNo">
-        <activity android:name=".Login"
-                  android:theme="@style/AppThemeNo"/>
-        <activity android:name=".Register"
-                  android:theme="@style/AppThemeNo"/>
+        <activity android:name=".activities.RetosSup">
+        </activity>
+        <activity
+                android:name=".Login"
+                android:theme="@style/AppThemeNo"/>
+        <activity
+                android:name=".Register"
+                android:theme="@style/AppThemeNo"/>
         <activity android:name=".Tourism">
         </activity>
         <activity android:name=".userData">

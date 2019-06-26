@@ -64,7 +64,7 @@ class Register :AppCompatActivity(){
             user.put("status",1)
             user.put("lastdate",currentDate)
             user.put("date",date.text.toString())
-            user.put("type", 1)
+            user.put("type", 0)
             val challenges = HashMap<String, Any>()
             val plant = HashMap<String, Any>()
             plant.put("level", 0)

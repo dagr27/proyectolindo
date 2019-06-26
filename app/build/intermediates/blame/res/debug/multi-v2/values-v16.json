@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\danie\\Desktop\\proyectolindo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\2de7cb9efa02874626915881985a60d0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\danie\\.gradle\\caches\\transforms-2\\files-2.1\\83dbc8929feff7f00ca9cab7c59d4a38\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\danie\\.gradle\\caches\\transforms-2\\files-2.1\\d35f83892c6ba6273ed61f813684eaa2\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

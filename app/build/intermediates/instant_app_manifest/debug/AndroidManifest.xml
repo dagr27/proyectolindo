@@ -30,6 +30,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppThemeNo" >
+        <activity android:name="com.example.ecologic.activities.RetosSup" >
+        </activity>
         <activity
             android:name="com.example.ecologic.Login"
             android:theme="@style/AppThemeNo" />

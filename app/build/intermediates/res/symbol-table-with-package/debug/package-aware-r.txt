@@ -1188,6 +1188,12 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id R_add
+id R_cat
+id R_love
+id R_sun
+id R_title
+id R_water
 id SHIFT
 id SYM
 id T_add
@@ -1226,6 +1232,7 @@ id action_tour
 id actions
 id activity_chooser_view_content
 id add
+id addingR
 id addingT
 id adjust_height
 id adjust_width
@@ -1309,6 +1316,7 @@ id edit_query
 id email
 id email_su
 id enable_add
+id enable_add_reto
 id enable_edit
 id end
 id end_padder
@@ -1427,6 +1435,7 @@ id progress_horizontal
 id radio
 id reg
 id reg_btn
+id retas
 id right
 id right_icon
 id right_side
@@ -1636,6 +1645,7 @@ layout activity_detail_event
 layout activity_detail_idea
 layout activity_detail_tour
 layout activity_main
+layout activity_retos_sup
 layout activity_success
 layout activity_sup_home
 layout activity_tourism
