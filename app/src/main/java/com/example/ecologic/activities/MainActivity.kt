@@ -1,6 +1,7 @@
 package com.example.ecologic.activities
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val reg = findViewById(R.id.reg) as Button
         val log = findViewById(R.id.log) as Button
+        val infoBtn :TextView = findViewById(R.id.infoMore)
         /*Verificar Sesioon*/
         if (FirebaseAuth.getInstance().currentUser != null) {
             Toast.makeText(this, "Sesion de: "+FirebaseAuth.getInstance().currentUser!!.email, Toast.LENGTH_LONG).show()
@@ -48,6 +50,8 @@ class MainActivity : AppCompatActivity() {
         log.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
+        }
+        infoBtn.setOnClickListener {
         }
 
     }

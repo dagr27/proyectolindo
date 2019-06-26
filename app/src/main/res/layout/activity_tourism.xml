@@ -74,8 +74,10 @@
 
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tourAdmin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:listitem="@layout/card_tour">
 
     </androidx.recyclerview.widget.RecyclerView>
 

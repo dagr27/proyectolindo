@@ -32,16 +32,6 @@ class SupHome : AppCompatActivity() {
         val logout:Button = findViewById(R.id.logout)
         val btnT:Button = findViewById(R.id.tourismAct)
         val retosbtn:Button = findViewById(R.id.retas)
-        /*val data = FirebaseFirestore.getInstance().collection("users").whereEqualTo("email", email)
-            .get().addOnCompleteListener{ task ->
-                if(task.isSuccessful){
-                    for (document in task.result!!){
-                        fullName = document["name"].toString() +" "+ document["lastname"].toString()
-                        text.setText(fullName)
-                    }
-                }
-            }*/
-
         val Recycler:RecyclerView=findViewById(R.id.all_users)
         Recycler.layoutManager=LinearLayoutManager(this)
 

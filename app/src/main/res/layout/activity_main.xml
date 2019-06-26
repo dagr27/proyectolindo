@@ -69,6 +69,7 @@
                     android:text="Mas información"
                     android:gravity="center"
                     android:textColor="#fff"
+                    android:id="@+id/infoMore"
                     android:textSize="18dp"
                     android:layout_marginBottom="45dp"
                     android:fontFamily="sans-serif-light"/>
