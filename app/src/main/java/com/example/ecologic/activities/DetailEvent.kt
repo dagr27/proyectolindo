@@ -47,6 +47,10 @@ class DetailEvent : AppCompatActivity() {
                     .get()
                     .addOnCompleteListener { events ->
                         for (document in events.result!!) {
+
+                            db.collection("events").document(document.id)
+                                .update("count",document["count"].toString().toInt() + 1)
+
                             val data = HashMap<String, Any>()
                             data["idEvent"] = document.id
                             db.collection("users").document(user).collection("events").document(document.id)
@@ -62,6 +66,10 @@ class DetailEvent : AppCompatActivity() {
                     .get()
                     .addOnCompleteListener { events ->
                         for (document in events.result!!) {
+
+                            db.collection("events").document(document.id)
+                                .update("count",document["count"].toString().toInt() - 1)
+
                             val data = HashMap<String, Any>()
                             data["idEvent"] = document.id
                             db.collection("users").document(user).collection("events").document(document.id)

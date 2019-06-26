@@ -40,7 +40,7 @@ class EventAdapter(var items: List<Event>, var listener: View.OnClickListener) :
                 .into(iv_e_preview)
             tv_e_title.text = item.title
             tv_e_description.text = item.description
-            tv_e_count.text = item.count.toString()
+            tv_e_count.text = item.count.toString() + " participantes"
         }
     }
 

@@ -25,6 +25,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.card_event.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.collections.ArrayList
 
 class HomeFragment : Fragment() {
@@ -45,6 +47,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        dailyChallenge()
 
         val mAuth= FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
@@ -268,5 +272,16 @@ class HomeFragment : Fragment() {
                         .update("sun", sun, "water", water, "love", love, "level", level)
                 }
             }
+    }
+
+    private fun dailyChallenge(){
+        val sdf = SimpleDateFormat("dd")
+        val day = sdf.format(Date())
+
+        val sdf2 = SimpleDateFormat("MMMM")
+        val mes = sdf2.format(Date())
+
+        tv_h_day.text = day.toString()
+        tv_h_mes.text = mes.toString()
     }
 }

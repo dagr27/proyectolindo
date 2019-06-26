@@ -96,6 +96,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_homeFragment_to_logoutFragment22">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_ideas">
                               <value>
                                 <LayoutPositions />
@@ -133,8 +138,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="1436" />
+                            <option name="x" value="-300" />
+                            <option name="y" value="736" />
                           </Point>
                         </option>
                       </LayoutPositions>
