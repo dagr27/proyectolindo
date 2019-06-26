@@ -38,6 +38,8 @@ class LogoutFragment : Fragment() {
         FirebaseAuth.getInstance().signOut()
         Toast.makeText(context,"Sesion Cerrada con exito", Toast.LENGTH_LONG).show()
         startActivity(Intent(context, Login::class.java))
+
+        activity?.finish()
     }
 
 }

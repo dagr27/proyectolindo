@@ -1275,6 +1275,7 @@ id btn_social
 id btn_t_cancel
 id btn_t_publish
 id btn_transport
+id busqueda
 id buttonPanel
 id cancel_action
 id card_event
@@ -1331,6 +1332,7 @@ id et_i_title
 id et_lastName
 id et_name
 id et_plant
+id et_search
 id et_t_coment
 id eventFragment
 id exitUntilCollapsed
@@ -1378,7 +1380,11 @@ id iv_e_preview
 id iv_i_preview
 id iv_plant
 id iv_t_preview
+id iv_thumb
 id iv_type
+id iv_uplove
+id iv_upsun
+id iv_upwater
 id labeled
 id largeLabel
 id lastname

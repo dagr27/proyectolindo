@@ -9,12 +9,23 @@
         tools:showIn="@layout/user_home"
         tools:context=".activities.MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/busqueda"
+            app:layout_constraintBottom_toTopOf="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="15dp"
+
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content"/>
+
     <fragment
             android:id="@+id/fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@+id/nav_bottom_view"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/busqueda"
             app:defaultNavHost="true"
             app:navGraph="@navigation/navigation_graph"/>
 

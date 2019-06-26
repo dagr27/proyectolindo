@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\danie\\Desktop\\proyectolindo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
+            "outputFile": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v21\\values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\danie\\.gradle\\caches\\transforms-2\\files-2.1\\d35f83892c6ba6273ed61f813684eaa2\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

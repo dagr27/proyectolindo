@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecologic.activities.MainActivity
 import com.example.ecologic.entities.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -17,39 +18,54 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class Register :AppCompatActivity(){
-    lateinit var db : DocumentReference
+class Register : AppCompatActivity() {
+    lateinit var db: DocumentReference
 
-    private fun validarVacios(name :EditText, lastname:EditText, email:EditText, pass:EditText, date:EditText, username:EditText): Boolean {
-        if(name.getText().toString().isEmpty()){
+    private fun validarVacios(
+        name: EditText,
+        lastname: EditText,
+        email: EditText,
+        pass: EditText,
+        date: EditText,
+        username: EditText
+    ): Boolean {
+        if (name.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Nombre Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(lastname.getText().toString().isEmpty()){
+        } else if (lastname.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Apellido Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(email.getText().toString().isEmpty()){
+        } else if (email.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Email Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(pass.getText().toString().isEmpty()){
+        } else if (pass.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Contraseña Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(date.getText().toString().isEmpty()){
+        } else if (date.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Fecha de Nacimiento Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(username.getText().toString().isEmpty()){
+        } else if (username.getText().toString().isEmpty()) {
             Toast.makeText(this, "Campo Nombre de Usuario Vacio", Toast.LENGTH_LONG).show()
             return false
-        }else if(pass.length() < 6){
+        } else if (pass.length() < 6) {
             pass.setError("Debes tener minimo 6 Caracteres")
             return false
-        }else{
+        } else {
             return true
         }
 
     }
 
-    private fun insertar(name :EditText, lastname:EditText, email:EditText, pass:EditText, date:EditText, username:EditText, intent:Intent){
-        try{
+    private fun insertar(
+        name: EditText,
+        lastname: EditText,
+        email: EditText,
+        pass: EditText,
+        date: EditText,
+        username: EditText,
+        intent: Intent
+    ) {
+        try {
             val sdf = SimpleDateFormat("dd/M/yyyy")
             val currentDate = sdf.format(Date())
             val db = FirebaseFirestore.getInstance()
@@ -58,12 +74,12 @@ class Register :AppCompatActivity(){
             user.put("username", username.text.toString())
             user.put("name", name.text.toString())
             user.put("lastname", lastname.text.toString())
-            user.put("password",pass.text.toString())
-            user.put("email",email.text.toString())
-            user.put("profilePicture","gs://ecologic-a7174.appspot.com/users/default.png")
-            user.put("status",1)
-            user.put("lastdate",currentDate)
-            user.put("date",date.text.toString())
+            user.put("password", pass.text.toString())
+            user.put("email", email.text.toString())
+            user.put("profilePicture", "gs://ecologic-a7174.appspot.com/users/default.png")
+            user.put("status", 1)
+            user.put("lastdate", currentDate)
+            user.put("date", date.text.toString())
             user.put("type", 0)
             val challenges = HashMap<String, Any>()
             val plant = HashMap<String, Any>()
@@ -73,22 +89,24 @@ class Register :AppCompatActivity(){
             plant.put("sun", 35)
             plant.put("water", 30)
             FirebaseAuth.getInstance()
-                .createUserWithEmailAndPassword(email.text.toString(),pass.text.toString())
-                .addOnCompleteListener(this){task->
-                        if (task.isSuccessful) {
-                            db.collection("users").document(email.text.toString()).set(user).addOnSuccessListener {
-                                db.collection("users/" + email.text.toString() + "/plants").add(plant).addOnSuccessListener {
+                .createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        db.collection("users").document(email.text.toString()).set(user).addOnSuccessListener {
+                            db.collection("users/" + email.text.toString() + "/plants").add(plant)
+                                .addOnSuccessListener {
                                 }
-                                db.collection("users/" + email.text.toString() + "/challenges").add(challenges).addOnSuccessListener {
+                            db.collection("users/" + email.text.toString() + "/challenges").add(challenges)
+                                .addOnSuccessListener {
                                 }
-                            }
-                            Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show()
-                            startActivity(intent)
                         }
-                }.addOnFailureListener {
-                        exception: java.lang.Exception -> Toast.makeText(this, exception.toString(), Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show()
+                        startActivity(intent)
+                    }
+                }.addOnFailureListener { exception: java.lang.Exception ->
+                    Toast.makeText(this, exception.toString(), Toast.LENGTH_LONG).show()
                 }
-        }catch (e:Exception){
+        } catch (e: Exception) {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
     }
@@ -106,12 +124,15 @@ class Register :AppCompatActivity(){
 
         btnReg.setOnClickListener {
             val intent = Intent(this, Login::class.java)
-            val state = validarVacios(name, lastname,email,pass,date,username)
+            val state = validarVacios(name, lastname, email, pass, date, username)
             /*Verificando e Insertando*/
-            if(state == true) insertar(name, lastname,email, pass, date,username,intent)
+            if (state == true) insertar(name, lastname, email, pass, date, username, intent)
 
         }
+    }
 
-
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

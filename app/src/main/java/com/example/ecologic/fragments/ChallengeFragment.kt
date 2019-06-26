@@ -177,10 +177,9 @@ class ChallengeFragment : Fragment() {
 
                 points(user, sun,water,love)
 
-                startActivity(Intent(this.context, SuccessActivity::class.java))
+                activity?.finish()
 
-                val ft = fragmentManager?.beginTransaction()
-                ft?.replace(R.id.fragment, HomeFragment())?.addToBackStack(null)?.commit()
+                startActivity(Intent(this.context, SuccessActivity::class.java))
             }
 
             builder.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }

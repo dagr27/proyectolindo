@@ -30,6 +30,7 @@
                     android:background="@drawable/logo"/>
 
             <EditText
+                    android:id="@+id/et_search"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/search"
@@ -40,7 +41,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_gravity="right"
                     android:textColorHint="#fff"
-                    android:hint="Buscar"/>
+                    android:hint="Buscar reto"/>
 
         </androidx.appcompat.widget.Toolbar>
 

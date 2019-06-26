@@ -4,10 +4,13 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
@@ -16,12 +19,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ecologic.R
 import com.example.ecologic.activities.DetailEvent
 import com.example.ecologic.activities.SuccessActivity
+import com.example.ecologic.activities.UserActivity
 import com.example.ecologic.adapters.*
+import com.example.ecologic.entities.Challenge
 import com.example.ecologic.entities.Event
 import com.example.ecologic.entities.Plant
 import com.example.ecologic.entities.UserXChallenge
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.app_bar.*
 import kotlinx.android.synthetic.main.card_event.view.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -48,10 +54,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        dailyChallenge()
-
-        val mAuth= FirebaseAuth.getInstance()
+        val mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
+
+        dailyChallenge(user)
 
         view.findViewById<View>(R.id.btn_challenges)
             .setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_challenges))
@@ -241,7 +247,7 @@ class HomeFragment : Fragment() {
             }
     }
 
-    private fun dailyChallenge(){
+    private fun dailyChallenge(user: String) {
         val sdf = SimpleDateFormat("dd")
         val day = sdf.format(Date())
 
@@ -250,5 +256,59 @@ class HomeFragment : Fragment() {
 
         tv_h_day.text = day.toString()
         tv_h_mes.text = mes.toString()
+
+        db.collection("users").document(user).collection("dailychallenge")
+            .get().addOnCompleteListener { task2 ->
+                for (document in task2.result!!) {
+                    db.collection("challenges").document(document["idChallenge"].toString())
+                        .get().addOnCompleteListener { task2 ->
+                            var document2 = task2.result!!
+                            val challenge = document2.toObject(Challenge::class.java)
+
+                            if (document["status"].toString() == "0") {
+                                tv_h_title.text = challenge?.title
+                                tv_h_sun.text = challenge?.sun.toString()
+                                tv_h_water.text = challenge?.water.toString()
+                                tv_h_love.text = challenge?.love.toString()
+                            } else {
+                                daily_challenge.visibility = View.GONE
+                            }
+                        }
+
+                }
+            }
+
+        daily_challenge.setOnClickListener {
+            val builder = AlertDialog.Builder(it.context)
+            builder.setTitle(tv_h_title.text)
+            builder.setMessage("¿Seguro que ya completaste este reto?")
+            builder.setPositiveButton("Si") { dialogInterface: DialogInterface, i: Int ->
+
+                db.collection("users").document(user).collection("dailychallenge")
+                    .get()
+                    .addOnCompleteListener { challenge ->
+                        for (document in challenge.result!!) {
+
+                            db.collection("users").document(user).collection("dailychallenge").document(document.id)
+                                .update("status", 1)
+                        }
+                    }
+
+                val sun = tv_h_sun.text.toString().substring(0, tv_h_sun.text.toString().length - 1).toInt()
+                val water = tv_h_water.text.toString().substring(0, tv_h_water.text.toString().length - 1).toInt()
+                val love = tv_h_love.text.toString().substring(0, tv_h_love.text.toString().length - 1).toInt()
+
+                points(user, sun, water, love)
+
+                activity?.finish()
+
+                startActivity(Intent(this.context, SuccessActivity::class.java))
+            }
+
+            builder.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder.show()
+        }
+
     }
+
 }

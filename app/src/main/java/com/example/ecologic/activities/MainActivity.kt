@@ -34,8 +34,10 @@ class MainActivity : AppCompatActivity() {
                         for (document in task.result!!) {
                             if (document["type"].toString() == "1") {
                                 startActivity(Intent(this, SupHome::class.java))
+                                finish()
                             } else if(document["type"].toString() == "0") {
                                 startActivity(Intent(this, UserActivity::class.java))
+                                finish()
                             }
                         }
                     }
@@ -45,11 +47,13 @@ class MainActivity : AppCompatActivity() {
         reg.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
+            finish()
         }
 
         log.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
+            finish()
         }
         infoBtn.setOnClickListener {
         }

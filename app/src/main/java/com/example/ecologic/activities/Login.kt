@@ -8,11 +8,12 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecologic.activities.MainActivity
 import com.example.ecologic.activities.UserActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class Login:AppCompatActivity() {
+class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -25,16 +26,23 @@ class Login:AppCompatActivity() {
                 .signInWithEmailAndPassword(txtEmail.text.toString(), txtPass.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        FirebaseFirestore.getInstance().collection("users").whereEqualTo("email",txtEmail.text.toString())
-                            .get().addOnCompleteListener{ tasks ->
-                                if(tasks.isSuccessful){
-                                    for (document in tasks.result!!){
-                                        if(document["type"].toString() == "1" && document["status"].toString() == "1"){
+                        FirebaseFirestore.getInstance().collection("users")
+                            .whereEqualTo("email", txtEmail.text.toString())
+                            .get().addOnCompleteListener { tasks ->
+                                if (tasks.isSuccessful) {
+                                    for (document in tasks.result!!) {
+                                        if (document["type"].toString() == "1" && document["status"].toString() == "1") {
                                             startActivity(Intent(this, SupHome::class.java))
-                                        }else if (document["type"].toString() == "0" && document["status"].toString() == "1"){
+                                            finish()
+                                        } else if (document["type"].toString() == "0" && document["status"].toString() == "1") {
                                             startActivity(Intent(this, UserActivity::class.java))
-                                        }else{
-                                            Toast.makeText(this, "Su cuenta no se encuentra activa, pero registrada, contactar al Administrador",Toast.LENGTH_LONG).show()
+                                            finish()
+                                        } else {
+                                            Toast.makeText(
+                                                this,
+                                                "Su cuenta no se encuentra activa, pero registrada, contactar al Administrador",
+                                                Toast.LENGTH_LONG
+                                            ).show()
                                         }
                                     }
                                 }
@@ -45,25 +53,31 @@ class Login:AppCompatActivity() {
                     }
                 }
         }
-            btnLog.setOnClickListener {
-                if (txtEmail.text.isEmpty()) {
-                    txtEmail.setError("Campo Email vacio")
-                } else if (txtPass.text.isEmpty()) {
-                    txtPass.setError("Campo Contraseña vacio")
-                } else if (txtPass.length() < 6) {
-                    txtPass.setError("Debes Tener un minimo de 6 caracteres")
-                } else if (txtEmail.text.isEmpty() and txtEmail.text.isEmpty()) {
-                    Toast.makeText(this, "Debes llenar los campos", Toast.LENGTH_LONG).show()
-                } else {
-                    login()
-                }
+        btnLog.setOnClickListener {
+            if (txtEmail.text.isEmpty()) {
+                txtEmail.setError("Campo Email vacio")
+            } else if (txtPass.text.isEmpty()) {
+                txtPass.setError("Campo Contraseña vacio")
+            } else if (txtPass.length() < 6) {
+                txtPass.setError("Debes Tener un minimo de 6 caracteres")
+            } else if (txtEmail.text.isEmpty() and txtEmail.text.isEmpty()) {
+                Toast.makeText(this, "Debes llenar los campos", Toast.LENGTH_LONG).show()
+            } else {
+                login()
             }
-            btnRegAct.setOnClickListener {
-                val intent = Intent(this, Register::class.java)
-                startActivity(intent)
-            }
-
-
         }
+        btnRegAct.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
     }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+}
 
