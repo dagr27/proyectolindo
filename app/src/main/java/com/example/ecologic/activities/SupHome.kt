@@ -30,7 +30,7 @@ class SupHome : AppCompatActivity() {
         val text = findViewById(R.id.admin_user) as TextView
         val logout:Button = findViewById(R.id.logout)
         val btnT:Button = findViewById(R.id.tourismAct)
-        val data = FirebaseFirestore.getInstance().collection("users").whereEqualTo("email",email.toString())
+        val data = FirebaseFirestore.getInstance().collection("users").whereEqualTo("email", email)
             .get().addOnCompleteListener{ task ->
                 if(task.isSuccessful){
                     for (document in task.result!!){

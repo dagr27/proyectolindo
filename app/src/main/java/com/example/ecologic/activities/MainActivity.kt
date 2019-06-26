@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val log = findViewById(R.id.log) as Button
         /*Verificar Sesioon*/
         if (FirebaseAuth.getInstance().currentUser != null) {
-            Toast.makeText(this, FirebaseAuth.getInstance().currentUser!!.email, Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Sesion de: "+FirebaseAuth.getInstance().currentUser!!.email, Toast.LENGTH_LONG).show()
             FirebaseFirestore.getInstance().collection("users")
                 .whereEqualTo("email", FirebaseAuth.getInstance().currentUser!!.email)
                 .get().addOnCompleteListener { task ->
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                         for (document in task.result!!) {
                             if (document["type"] == 0) {
                                 startActivity(Intent(this, SupHome::class.java))
-                            } else {
+                            } else if(document["type"] == 1) {
                                 startActivity(Intent(this, UserActivity::class.java))
                             }
                         }

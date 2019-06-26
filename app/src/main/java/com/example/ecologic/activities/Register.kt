@@ -7,10 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecologic.entities.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.register.*
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class Register :AppCompatActivity(){
@@ -46,27 +50,44 @@ class Register :AppCompatActivity(){
 
     private fun insertar(name :EditText, lastname:EditText, email:EditText, pass:EditText, date:EditText, username:EditText, intent:Intent){
         try{
+            val sdf = SimpleDateFormat("dd/M/yyyy")
+            val currentDate = sdf.format(Date())
             val db = FirebaseFirestore.getInstance()
+            /*username:String, name: String, lastname: String, password: String, profilePicture: String, status: Int, lastDate: String, type: Int*/
             val user = HashMap<String, Any>()
-            user.put("name", name.getText().toString())
-            user.put("lastname", lastname.getText().toString())
-            user.put("email",email.getText().toString())
-            user.put("password",pass.getText().toString())
-            user.put("date",date.getText().toString())
+            user.put("username", username.text.toString())
+            user.put("name", name.text.toString())
+            user.put("lastname", lastname.text.toString())
+            user.put("password",pass.text.toString())
+            user.put("email",email.text.toString())
+            user.put("profilePicture","gs://ecologic-a7174.appspot.com/users/default.png")
+            user.put("status",1)
+            user.put("lastdate",currentDate)
+            user.put("date",date.text.toString())
             user.put("type", 1)
-
-            db.collection("users").document(username.getText().toString()).set(user).addOnSuccessListener {
-                Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show()
-                FirebaseAuth.getInstance()
-                    .createUserWithEmailAndPassword(email.getText().toString(),pass.getText().toString())
-                    .addOnCompleteListener(this){
-                            task -> if(task.isSuccessful){
-                        startActivity(intent)
-                    }
-                    }
-            }.addOnFailureListener {
-                    exception: java.lang.Exception -> Toast.makeText(this, exception.toString(), Toast.LENGTH_LONG).show()
-            }
+            val challenges = HashMap<String, Any>()
+            val plant = HashMap<String, Any>()
+            plant.put("level", 0)
+            plant.put("love", 0)
+            plant.put("name", "Cactusin")
+            plant.put("sun", 0)
+            plant.put("water", 0)
+            FirebaseAuth.getInstance()
+                .createUserWithEmailAndPassword(email.text.toString(),pass.text.toString())
+                .addOnCompleteListener(this){task->
+                        if (task.isSuccessful) {
+                            db.collection("users").document(email.text.toString()).set(user).addOnSuccessListener {
+                                db.collection("users/" + email.text.toString() + "/plants").add(plant).addOnSuccessListener {
+                                }
+                                db.collection("users/" + email.text.toString() + "/challenges").add(challenges).addOnSuccessListener {
+                                }
+                            }
+                            Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show()
+                            startActivity(intent)
+                        }
+                }.addOnFailureListener {
+                        exception: java.lang.Exception -> Toast.makeText(this, exception.toString(), Toast.LENGTH_LONG).show()
+                }
         }catch (e:Exception){
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }

@@ -13,14 +13,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class Login:AppCompatActivity() {
-    /*Cambia esta cosa a 1 si queres entrar en tu main y quema los datos no entiendo porque no me agarra esto si funcionaba en el otro proyecto */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
-        var type: TextView = findViewById(R.id.type_login)
         val txtEmail: EditText = findViewById(R.id.txt_username)
         val txtPass: EditText = findViewById(R.id.txt_pass)
-        var ty = "1"
         val btnLog = findViewById<Button>(R.id.btnLog)
         val btnRegAct = findViewById<TextView>(R.id.btnRegAct)
         fun login() {
@@ -32,11 +29,12 @@ class Login:AppCompatActivity() {
                             .get().addOnCompleteListener{ tasks ->
                                 if(tasks.isSuccessful){
                                     for (document in tasks.result!!){
-
-                                        if(document["type"] == 0){
+                                        if(document["type"] == 0 && document["status"] == 1){
                                             startActivity(Intent(this, SupHome::class.java))
-                                        }else{
+                                        }else if (document["type"] == 1 && document["status"] == 1){
                                             startActivity(Intent(this, UserActivity::class.java))
+                                        }else{
+                                            Toast.makeText(this, "Su cuenta no se encuentra activa, pero registrada, contactar al Administrador",Toast.LENGTH_LONG).show()
                                         }
                                     }
                                 }
@@ -60,9 +58,6 @@ class Login:AppCompatActivity() {
                     login()
                 }
             }
-        btnLog.setOnClickListener {
-            login()
-        }
             btnRegAct.setOnClickListener {
                 val intent = Intent(this, Register::class.java)
                 startActivity(intent)
