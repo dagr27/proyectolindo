@@ -1,5 +1,6 @@
 package com.proyect.ecologic.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,7 @@ import com.proyect.ecologic.adapters.ChallengeAdapter
 import com.proyect.ecologic.entities.Challenge
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_retos_sup.*
+import kotlinx.android.synthetic.main.card_challenge.view.*
 
 class RetosSup : AppCompatActivity() {
     private lateinit var viewAdapter: ChallengeAdapter
@@ -48,7 +50,9 @@ class RetosSup : AppCompatActivity() {
             else addBox.visibility = View.GONE
         }
         val click = View.OnClickListener { v ->
-
+            val intent = Intent(this, retosData::class.java)
+            intent.putExtra("title", v.tv_c_title.text.toString())
+            startActivity(intent)
         }
 
         FirebaseFirestore.getInstance().collection("challenges").get()

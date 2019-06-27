@@ -56,7 +56,7 @@ class Tourism : AppCompatActivity() {
             }
 
         val click = View.OnClickListener { v ->
-
+            /*Aqui vamos a añadir la otra actividad de esta cosa*/
         }
 
         viewAdapter = TourAdapter(tourList,click)

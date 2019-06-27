@@ -29,6 +29,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppThemeNo" >
+        <activity android:name="com.proyect.ecologic.activities.retosData" >
+        </activity>
         <activity android:name="com.proyect.ecologic.activities.RetosSup" >
         </activity>
         <activity

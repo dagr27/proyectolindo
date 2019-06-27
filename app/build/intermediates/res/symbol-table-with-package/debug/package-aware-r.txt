@@ -1192,10 +1192,15 @@ id FUNCTION
 id META
 id R_add
 id R_cat
+id R_cat_edit
 id R_love
+id R_love_edit
 id R_sun
+id R_sun_edit
 id R_title
+id R_title_edit
 id R_water
+id R_water_edit
 id SHIFT
 id SYM
 id T_add
@@ -1255,6 +1260,7 @@ id blocking
 id blogFragment
 id body
 id bottom
+id btnAct_re_su
 id btnAct_su
 id btnLog
 id btnRegAct
@@ -1321,6 +1327,7 @@ id email_su
 id enable_add
 id enable_add_reto
 id enable_edit
+id enable_edit_re
 id end
 id end_padder
 id enterAlways
@@ -1655,6 +1662,7 @@ layout activity_detail_event
 layout activity_detail_idea
 layout activity_detail_tour
 layout activity_main
+layout activity_retos_data
 layout activity_retos_sup
 layout activity_success
 layout activity_sup_home
