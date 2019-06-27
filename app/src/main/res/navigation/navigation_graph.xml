@@ -3,7 +3,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_graph" app:startDestination="@id/homeFragment">
 
-    <fragment android:id="@+id/homeFragment" android:name="com.example.ecologic.fragments.HomeFragment"
+    <fragment android:id="@+id/homeFragment" android:name="com.proyect.ecologic.fragments.HomeFragment"
               android:label="HomeFragment">
         <action android:id="@+id/action_setting" app:destination="@id/settingFragment"/>
         <action android:id="@+id/action_challenges" app:destination="@id/challengeFragment"/>
@@ -14,24 +14,24 @@
         <action android:id="@+id/action_homeFragment_to_logoutFragment2" app:destination="@id/logoutFragment"/>
         <action android:id="@+id/action_homeFragment_to_logoutFragment22" app:destination="@id/logoutFragment"/>
     </fragment>
-    <fragment android:id="@+id/settingFragment" android:name="com.example.ecologic.fragments.SettingFragment"
+    <fragment android:id="@+id/settingFragment" android:name="com.proyect.ecologic.fragments.SettingFragment"
               android:label="SettingFragment"/>
-    <fragment android:id="@+id/challengeFragment" android:name="com.example.ecologic.fragments.ChallengeFragment"
+    <fragment android:id="@+id/challengeFragment" android:name="com.proyect.ecologic.fragments.ChallengeFragment"
               android:label="fragment_challenge" tools:layout="@layout/fragment_challenge"/>
-    <fragment android:id="@+id/blogFragment" android:name="com.example.ecologic.fragments.BlogFragment"
+    <fragment android:id="@+id/blogFragment" android:name="com.proyect.ecologic.fragments.BlogFragment"
               android:label="fragment_blog" tools:layout="@layout/fragment_blog">
         <action android:id="@+id/action_detail_blog" app:destination="@id/detailBlog"/>
     </fragment>
-    <activity android:id="@+id/detailBlog" android:name="com.example.ecologic.activities.DetailBlog"
+    <activity android:id="@+id/detailBlog" android:name="com.proyect.ecologic.activities.DetailBlog"
               android:label="activity_detail_blog" tools:layout="@layout/activity_detail_blog"/>
-    <fragment android:id="@+id/ideaFragment" android:name="com.example.ecologic.fragments.IdeaFragment"
+    <fragment android:id="@+id/ideaFragment" android:name="com.proyect.ecologic.fragments.IdeaFragment"
               android:label="fragment_idea" tools:layout="@layout/fragment_idea"/>
-    <fragment android:id="@+id/eventFragment" android:name="com.example.ecologic.fragments.EventFragment"
+    <fragment android:id="@+id/eventFragment" android:name="com.proyect.ecologic.fragments.EventFragment"
               android:label="EventFragment"/>
-    <fragment android:id="@+id/tourFragment" android:name="com.example.ecologic.fragments.TourFragment"
+    <fragment android:id="@+id/tourFragment" android:name="com.proyect.ecologic.fragments.TourFragment"
               android:label="fragment_tour" tools:layout="@layout/fragment_tour"/>
-    <fragment android:id="@+id/logoutFragment" android:name="com.example.ecologic.fragments.LogoutFragment"
+    <fragment android:id="@+id/logoutFragment" android:name="com.proyect.ecologic.fragments.LogoutFragment"
               android:label="fragment_logout" tools:layout="@layout/fragment_logout"/>
-    <fragment android:id="@+id/logoutFragment" android:name="com.example.ecologic.fragments.LogoutFragment"
+    <fragment android:id="@+id/logoutFragment" android:name="com.proyect.ecologic.fragments.LogoutFragment"
               android:label="fragment_logout" tools:layout="@layout/fragment_logout"/>
 </navigation>

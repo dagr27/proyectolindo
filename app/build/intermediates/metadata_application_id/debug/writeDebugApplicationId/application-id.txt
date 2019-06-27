@@ -1,1 +1,1 @@
-com.example.ecologic
+com.proyect.ecologic

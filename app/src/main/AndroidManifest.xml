@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.ecologic">
+          package="com.proyect.ecologic">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -12,67 +12,67 @@
             android:roundIcon="@mipmap/ic_launcher"
             android:supportsRtl="true"
             android:theme="@style/AppThemeNo">
-        <activity android:name=".activities.RetosSup">
+        <activity android:name="com.proyect.ecologic.activities.RetosSup">
         </activity>
         <activity
-                android:name=".Login"
+                android:name="com.proyect.ecologic.Login"
                 android:theme="@style/AppThemeNo"/>
         <activity
-                android:name=".Register"
+                android:name="com.proyect.ecologic.Register"
                 android:theme="@style/AppThemeNo"/>
-        <activity android:name=".Tourism">
+        <activity android:name="com.proyect.ecologic.Tourism">
         </activity>
-        <activity android:name=".userData">
+        <activity android:name="com.proyect.ecologic.userData">
         </activity>
-        <activity android:name=".SupHome">
+        <activity android:name="com.proyect.ecologic.SupHome">
         </activity>
         <activity
-                android:name=".activities.UserActivity"
+                android:name="com.proyect.ecologic.activities.UserActivity"
                 android:label="@string/title_activity_user"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.AddComent"
+                android:name="com.proyect.ecologic.activities.AddComent"
                 android:label="@string/title_activity_add_coment"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.DetailTour"
+                android:name="com.proyect.ecologic.activities.DetailTour"
                 android:label="@string/title_activity_detail_tour"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.SuccessActivity"
+                android:name="com.proyect.ecologic.activities.SuccessActivity"
                 android:label="@string/title_activity_success"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.AddEvent"
+                android:name="com.proyect.ecologic.activities.AddEvent"
                 android:label="@string/title_activity_add_event"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.DetailEvent"
+                android:name="com.proyect.ecologic.activities.DetailEvent"
                 android:label="@string/title_activity_detail_event"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.DetailIdea"
+                android:name="com.proyect.ecologic.activities.DetailIdea"
                 android:label="@string/title_activity_detail_idea"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.AddIdea"
+                android:name="com.proyect.ecologic.activities.AddIdea"
                 android:label=""
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.DetailBlog"
+                android:name="com.proyect.ecologic.activities.DetailBlog"
                 android:label="@string/title_activity_detail_blog"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".activities.MainActivity"
+                android:name="com.proyect.ecologic.activities.MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
