@@ -1381,12 +1381,15 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id iv_b_preview
+id iv_coment_user
 id iv_db
 id iv_de
 id iv_di
 id iv_dt
 id iv_e_preview
+id iv_event_user
 id iv_i_preview
+id iv_idea_user
 id iv_plant
 id iv_t_preview
 id iv_thumb
@@ -1595,7 +1598,6 @@ id useLogo
 id user
 id user_email
 id user_enable
-id user_image
 id user_su
 id user_sup
 id user_view

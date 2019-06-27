@@ -1,5 +1,6 @@
 package com.proyect.ecologic.activities
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide
@@ -15,6 +16,7 @@ class DetailEvent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_detail_event)
         val reciever: Event = intent?.extras?.getParcelable("EVENT") ?: Event()
         init(reciever)

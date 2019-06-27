@@ -1,5 +1,6 @@
 package com.proyect.ecologic
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,6 +25,7 @@ class Tourism : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_tourism)
         var btnAdd : TextView = findViewById(R.id.T_add)
         var title :EditText= findViewById(R.id.T_title)

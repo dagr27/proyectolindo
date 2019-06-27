@@ -1,6 +1,7 @@
 package com.proyect.ecologic
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -115,6 +116,7 @@ class Register : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.register)
         val btnReg = findViewById(R.id.reg_btn) as Button
         val name = findViewById(R.id.name) as EditText

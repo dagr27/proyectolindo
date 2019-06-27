@@ -2,12 +2,14 @@ package com.proyect.ecologic.activities
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity;
+import com.bumptech.glide.Glide
 import com.proyect.ecologic.R
 import com.proyect.ecologic.entities.Event
 import com.google.android.gms.tasks.Continuation
@@ -16,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
+import com.proyect.ecologic.entities.User
 import kotlinx.android.synthetic.main.activity_add_event.*
 
 import kotlinx.android.synthetic.main.activity_add_idea.toolbar
@@ -32,11 +35,25 @@ class AddEvent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_add_event)
         setSupportActionBar(toolbar)
 
-        val mAuth= FirebaseAuth.getInstance()
+        val mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
+
+        db.collection("users").document(user)
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    var document = task.result!!
+
+                    val user = document.toObject(User::class.java)
+                    Glide.with(this)
+                        .load(user?.profilePicture)
+                        .into(iv_event_user)
+                }
+            }
 
         btn_e_selectImage.setOnClickListener { launchGallery() }
 
@@ -80,7 +97,7 @@ class AddEvent : AppCompatActivity() {
 
     private fun addUploadRecordToDb(user: String, uri: String) {
         val event =
-            Event(et_e_title.text.toString(), et_e_description.text.toString(), uri, et_e_date.text.toString(), 0,user)
+            Event(et_e_title.text.toString(), et_e_description.text.toString(), uri, et_e_date.text.toString(), 0, user)
 
         db.collection("events")
             .add(event)

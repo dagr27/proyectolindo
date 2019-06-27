@@ -1,6 +1,7 @@
 package com.proyect.ecologic.activities
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,6 +27,7 @@ class RetosSup : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_retos_sup)
         var btnAdd : TextView = findViewById(R.id.R_add)
         var title : EditText = findViewById(R.id.R_title)

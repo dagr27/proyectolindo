@@ -35,7 +35,7 @@
         </activity>
         <activity
                 android:name=".activities.AddComent"
-                android:label="@string/title_activity_add_coment"
+                android:label=""
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
@@ -50,7 +50,7 @@
         </activity>
         <activity
                 android:name=".activities.AddEvent"
-                android:label="@string/title_activity_add_event"
+                android:label=""
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

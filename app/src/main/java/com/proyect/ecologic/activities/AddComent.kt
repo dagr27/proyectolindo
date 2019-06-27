@@ -1,12 +1,15 @@
 package com.proyect.ecologic.activities
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity;
+import com.bumptech.glide.Glide
 import com.proyect.ecologic.R
 import com.proyect.ecologic.entities.Coment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.proyect.ecologic.entities.User
 import kotlinx.android.synthetic.main.activity_add_coment.*
 import kotlinx.android.synthetic.main.activity_add_idea.toolbar
 import kotlinx.android.synthetic.main.content_add_tour.*
@@ -18,11 +21,25 @@ class AddComent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_add_coment)
         setSupportActionBar(toolbar)
 
         val mAuth= FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
+
+        db.collection("users").document(user)
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    var document = task.result!!
+
+                    val user = document.toObject(User::class.java)
+                    Glide.with(this)
+                        .load(user?.profilePicture)
+                        .into(iv_coment_user)
+                }
+            }
 
         val extras = intent.extras
         tv_t_place.text = extras.getString("COMENT")

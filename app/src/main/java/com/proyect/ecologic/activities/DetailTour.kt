@@ -1,6 +1,7 @@
 package com.proyect.ecologic.activities
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ class DetailTour : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_detail_tour)
         val reciever: Tour = intent?.extras?.getParcelable("TOUR") ?: Tour()
         init(reciever)

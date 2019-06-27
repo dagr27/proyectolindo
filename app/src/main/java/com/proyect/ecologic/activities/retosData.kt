@@ -1,5 +1,6 @@
 package com.proyect.ecologic.activities
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -28,6 +29,7 @@ class retosData : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_retos_data)
         val btn : Button = findViewById(R.id.btnAct_re_su)
         var titleTxt : EditText = findViewById(R.id.R_title_edit)

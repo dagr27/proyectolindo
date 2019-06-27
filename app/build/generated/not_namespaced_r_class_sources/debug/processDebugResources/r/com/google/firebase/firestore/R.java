@@ -140,24 +140,24 @@ public final class R {
         public static final int icon_only = 0x7f0900b7;
         public static final int info = 0x7f0900bd;
         public static final int italic = 0x7f0900c0;
-        public static final int light = 0x7f0900d5;
-        public static final int line1 = 0x7f0900d6;
-        public static final int line3 = 0x7f0900d7;
-        public static final int media_actions = 0x7f0900de;
-        public static final int none = 0x7f0900ed;
-        public static final int normal = 0x7f0900ee;
-        public static final int notification_background = 0x7f0900ef;
-        public static final int notification_main_column = 0x7f0900f0;
-        public static final int notification_main_column_container = 0x7f0900f1;
-        public static final int right_icon = 0x7f09010b;
-        public static final int right_side = 0x7f09010c;
-        public static final int standard = 0x7f09013d;
-        public static final int status_bar_latest_event_content = 0x7f09013f;
-        public static final int text = 0x7f09014a;
-        public static final int text2 = 0x7f09014b;
-        public static final int time = 0x7f090153;
-        public static final int title = 0x7f090154;
-        public static final int wide = 0x7f0901a0;
+        public static final int light = 0x7f0900d8;
+        public static final int line1 = 0x7f0900d9;
+        public static final int line3 = 0x7f0900da;
+        public static final int media_actions = 0x7f0900e1;
+        public static final int none = 0x7f0900f0;
+        public static final int normal = 0x7f0900f1;
+        public static final int notification_background = 0x7f0900f2;
+        public static final int notification_main_column = 0x7f0900f3;
+        public static final int notification_main_column_container = 0x7f0900f4;
+        public static final int right_icon = 0x7f09010e;
+        public static final int right_side = 0x7f09010f;
+        public static final int standard = 0x7f090140;
+        public static final int status_bar_latest_event_content = 0x7f090142;
+        public static final int text = 0x7f09014d;
+        public static final int text2 = 0x7f09014e;
+        public static final int time = 0x7f090156;
+        public static final int title = 0x7f090157;
+        public static final int wide = 0x7f0901a2;
     }
     public static final class integer {
         private integer() {}
