@@ -22,7 +22,7 @@
                 android:scaleType="fitXY"/>
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
+                android:layout_height="70dp"
                 android:orientation="vertical">
             <TextView
                     android:id="@+id/tv_t_title"
@@ -31,28 +31,30 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center_horizontal"
-                    android:text="Hola"
                     android:textColor="#000"
-                    android:textSize="16dp"/>
+                    android:textSize="18dp"/>
 
-            <TextView
-                    android:id="@+id/tv_t_rate"
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Hola"
-                    android:textColor="@android:color/holo_blue_dark"
-                    android:textSize="13dp"/>
-            <TextView
-                    android:id="@+id/tv_t_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-                    android:textSize="14dp"/>
+                    android:layout_marginLeft="12dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/star"/>
+
+                <TextView
+                        android:id="@+id/tv_t_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#000"
+                        android:text="10"
+                        android:textSize="15dp"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

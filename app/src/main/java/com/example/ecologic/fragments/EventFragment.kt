@@ -81,7 +81,7 @@ class EventFragment : Fragment() {
                                     val event = document.toObject(Event::class.java)
                                     youList.add(event)
                                 }
-                                viewAdapter.setData(youList)
+                                viewAdapter2.setData(youList)
                             }
                     }
                 }

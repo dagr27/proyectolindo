@@ -76,18 +76,22 @@ class Register : AppCompatActivity() {
             user.put("lastname", lastname.text.toString())
             user.put("password", pass.text.toString())
             user.put("email", email.text.toString())
-            user.put("profilePicture", "gs://ecologic-a7174.appspot.com/users/default.png")
+            user.put("profilePicture", "https://firebasestorage.googleapis.com/v0/b/ecologic-a7174.appspot.com/o/users%2Fdefault.png?alt=media&token=354f80a2-9bdc-4a45-973d-de97729cdc24")
             user.put("status", 1)
             user.put("lastdate", currentDate)
             user.put("date", date.text.toString())
             user.put("type", 0)
             val challenges = HashMap<String, Any>()
             val plant = HashMap<String, Any>()
-            plant.put("level", 25)
-            plant.put("love", 15)
-            plant.put("name", "Cactusin")
-            plant.put("sun", 35)
-            plant.put("water", 30)
+            plant.put("level", 1)
+            plant.put("love", 50)
+            plant.put("name", "Moshii")
+            plant.put("sun", 50)
+            plant.put("water", 50)
+
+            val daily = HashMap<String, Any>()
+            daily.put("idChallenge", "9GZzH9wZLxafGjJqYA9j")
+            daily.put("status", 0)
             FirebaseAuth.getInstance()
                 .createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
                 .addOnCompleteListener(this) { task ->
@@ -99,8 +103,11 @@ class Register : AppCompatActivity() {
                             db.collection("users/" + email.text.toString() + "/challenges").add(challenges)
                                 .addOnSuccessListener {
                                 }
+                            db.collection("users/" + email.text.toString() + "/dailychallenge").add(daily)
+                                .addOnSuccessListener {
+                                }
                         }
-                        Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Usuario registrado correctamente", Toast.LENGTH_LONG).show()
                         startActivity(intent)
                     }
                 }.addOnFailureListener { exception: java.lang.Exception ->

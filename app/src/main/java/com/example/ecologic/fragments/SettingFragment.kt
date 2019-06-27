@@ -24,6 +24,7 @@ import java.io.IOException
 import java.util.*
 import kotlin.collections.HashMap
 import com.bumptech.glide.Glide
+import com.example.ecologic.activities.UserActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SettingFragment : Fragment() {
@@ -112,6 +113,9 @@ class SettingFragment : Fragment() {
                 }
 
             uploadImage(user)
+
+            activity?.finish()
+            startActivity(Intent(context, UserActivity::class.java))
 
             Toast.makeText(context, "Perfil actualizado correctamente.", Toast.LENGTH_SHORT).show()
 

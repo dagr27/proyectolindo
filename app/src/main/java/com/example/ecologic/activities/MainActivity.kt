@@ -24,9 +24,8 @@ class MainActivity : AppCompatActivity() {
         val reg = findViewById(R.id.reg) as Button
         val log = findViewById(R.id.log) as Button
         val infoBtn :TextView = findViewById(R.id.infoMore)
-        /*Verificar Sesioon*/
+        /*Verificar Sesion*/
         if (FirebaseAuth.getInstance().currentUser != null) {
-            Toast.makeText(this, "Sesion de: "+FirebaseAuth.getInstance().currentUser!!.email, Toast.LENGTH_LONG).show()
             FirebaseFirestore.getInstance().collection("users")
                 .whereEqualTo("email", FirebaseAuth.getInstance().currentUser!!.email)
                 .get().addOnCompleteListener { task ->

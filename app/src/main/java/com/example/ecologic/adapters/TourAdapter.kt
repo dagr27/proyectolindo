@@ -40,7 +40,6 @@ class TourAdapter(var items: List<Tour>, var listener: View.OnClickListener) :
                 .load(item.image)
                 .into(iv_t_preview)
             tv_t_title.text = item.name
-            tv_t_description.text = item.description
             tv_t_rate.text = item.rate.toString()
         }
     }

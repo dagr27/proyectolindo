@@ -47,9 +47,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="15dp"
                         android:gravity="top"
-                        android:inputType="date"
                         android:layout_marginBottom="10dp"
-                        android:hint="Fecha"/>
+                        android:hint="Ejemplo: 15 julio"/>
                 <EditText
                         android:id="@+id/et_e_description"
                         android:layout_width="match_parent"

@@ -48,18 +48,18 @@ class Login : AppCompatActivity() {
                                 }
                             }
                     } else {
-                        Toast.makeText(this, "Inicio de Sesion Fallido", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Inicio de sesion fallido", Toast.LENGTH_SHORT).show()
 
                     }
                 }
         }
         btnLog.setOnClickListener {
             if (txtEmail.text.isEmpty()) {
-                txtEmail.setError("Campo Email vacio")
+                txtEmail.setError("Campo email vacio")
             } else if (txtPass.text.isEmpty()) {
-                txtPass.setError("Campo Contraseña vacio")
+                txtPass.setError("Campo contraseña vacio")
             } else if (txtPass.length() < 6) {
-                txtPass.setError("Debes Tener un minimo de 6 caracteres")
+                txtPass.setError("Debes tener un minimo de 6 caracteres")
             } else if (txtEmail.text.isEmpty() and txtEmail.text.isEmpty()) {
                 Toast.makeText(this, "Debes llenar los campos", Toast.LENGTH_LONG).show()
             } else {

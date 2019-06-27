@@ -1066,6 +1066,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add
+drawable add2
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
@@ -1166,6 +1167,7 @@ drawable settings
 drawable signal
 drawable social
 drawable social2
+drawable star
 drawable success
 drawable sunny
 drawable thumb
@@ -1571,7 +1573,6 @@ id tv_love
 id tv_plant
 id tv_status
 id tv_sun
-id tv_t_description
 id tv_t_place
 id tv_t_rate
 id tv_t_title

@@ -148,6 +148,10 @@
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\add.png"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back_home.jpg.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\back_home.jpg"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -254,6 +258,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_img.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\img.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -696,6 +704,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-v21\\abc_list_divider_material.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_person.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\person.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -840,6 +852,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_update.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\update.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -944,6 +960,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\back.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
@@ -988,6 +1008,10 @@
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\add.png"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\ic_launcher_background.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_buttonradius2.xml.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\buttonradius2.xml"
     },
@@ -1010,6 +1034,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\2de7cb9efa02874626915881985a60d0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_add2.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\add2.png"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_transporte.png.flat",
@@ -1122,6 +1150,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_plug.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\plug.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_email.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\email.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1268,10 +1300,6 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\45d35bbfac02fab729555f1a7b98acae\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_add.png.flat",
-        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\add.png"
-    },
-    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\0fe766ee8284add656462d101ad29aa4\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
@@ -1286,6 +1314,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_star.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\star.png"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -1366,6 +1398,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_date.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\date.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
@@ -1540,10 +1576,6 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add.png.flat",
-        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable\\add.png"
-    },
-    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_sheet_dialog.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\ea6a33b7e7d30a880f716a35c1afa427\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
@@ -1652,6 +1684,14 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_add.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\add.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_unfocus.jpg.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\unfocus.jpg"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\2de7cb9efa02874626915881985a60d0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
@@ -1696,12 +1736,20 @@
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable\\search.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo_tipo.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\logo_tipo.png"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout_card_idea.xml.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\layout\\card_idea.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_key.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\key.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hearth.png.flat",
@@ -1750,6 +1798,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_exit.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_btn_home.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\btn_home.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1892,6 +1944,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_foco4.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\foco4.png"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\0fe766ee8284add656462d101ad29aa4\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
@@ -1924,6 +1980,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_circle.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\circle.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\0fe766ee8284add656462d101ad29aa4\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
@@ -1934,6 +1994,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\ea6a33b7e7d30a880f716a35c1afa427\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_search.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\search.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\font_bold.ttf.flat",
@@ -2058,6 +2122,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_tipo_green.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable\\logo_tipo_green.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\ic_dashboard_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
@@ -2340,6 +2408,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_user.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\user.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_event.xml.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\layout\\activity_detail_event.xml"
     },
@@ -2358,6 +2430,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_back.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back_home2.jpg.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\back_home2.jpg"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -2430,6 +2506,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_idea.xml.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\layout\\fragment_idea.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\ic_notifications_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -2620,6 +2700,14 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_star.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable\\star.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo_tipo_green.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\logo_tipo_green.png"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\anim_nav_default_exit_anim.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\7c5f3a25fe2022d7b04faac633e0556a\\res\\anim\\nav_default_exit_anim.xml"
     },
@@ -2728,6 +2816,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\ea6a33b7e7d30a880f716a35c1afa427\\res\\drawable\\mtrl_snackbar_background.xml"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\ic_home_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
@@ -2750,6 +2842,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_user.xml.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\user.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_eye.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\eye.xml"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_wallpaper.jpg.flat",
@@ -2824,6 +2920,10 @@
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_home_rounded.xml.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\home_rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\font_semibold.ttf.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\font\\semibold.ttf"
     },
@@ -2874,6 +2974,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_date.png.flat",
         "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\date.png"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo_tipo_dark.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable-v24\\logo_tipo_dark.png"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
@@ -2930,6 +3034,10 @@
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
         "source": "C:\\Users\\erikr\\.gradle\\caches\\transforms-2\\files-2.1\\fd54276d7db05ee8eaf28e1060685269\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_add2.png.flat",
+        "source": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\src\\main\\res\\drawable\\add2.png"
     },
     {
         "merged": "C:\\Users\\erikr\\Documents\\GitHub\\proyectolindo\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_dark.xml.flat",

@@ -93,5 +93,6 @@ class DetailEvent : AppCompatActivity() {
         tv_de_title.text = event.title
         tv_de_description.text = event.description
         tv_de_username.text = event.username
+        tv_de_date.text = event.date
     }
 }

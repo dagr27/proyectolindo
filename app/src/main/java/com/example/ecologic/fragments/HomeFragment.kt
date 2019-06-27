@@ -239,7 +239,7 @@ class HomeFragment : Fragment() {
                         love = 100
                     }
 
-                    var level = plant.level + 2
+                    var level = plant.level + 1
 
                     db.collection("users").document(user).collection("plants").document(document.id)
                         .update("sun", sun, "water", water, "love", love, "level", level)
@@ -267,9 +267,9 @@ class HomeFragment : Fragment() {
 
                             if (document["status"].toString() == "0") {
                                 tv_h_title.text = challenge?.title
-                                tv_h_sun.text = challenge?.sun.toString()
-                                tv_h_water.text = challenge?.water.toString()
-                                tv_h_love.text = challenge?.love.toString()
+                                tv_h_sun.text = challenge?.sun.toString() + "%"
+                                tv_h_water.text = challenge?.water.toString() + "%"
+                                tv_h_love.text = challenge?.love.toString() + "%"
                             } else {
                                 daily_challenge.visibility = View.GONE
                             }
