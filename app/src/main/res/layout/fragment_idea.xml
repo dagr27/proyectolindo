@@ -5,18 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         tools:context=".fragments.IdeaFragment">
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_add_idea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="70dp"
-            android:layout_marginRight="16dp"
-            app:srcCompat="@drawable/pencil"
-            tools:ignore="VectorDrawableCompat"/>
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -52,5 +41,15 @@
             android:layout_width="match_parent"
             android:layout_marginBottom="60dp"
             android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_idea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/pencil"
+            tools:ignore="VectorDrawableCompat"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

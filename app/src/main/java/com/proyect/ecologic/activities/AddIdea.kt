@@ -11,18 +11,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide
 import com.proyect.ecologic.R
-import com.proyect.ecologic.entities.Idea
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
+import com.proyect.ecologic.entities.Idea
+import com.proyect.ecologic.entities.Plant
 import com.proyect.ecologic.entities.User
-
 import kotlinx.android.synthetic.main.activity_add_idea.*
-import kotlinx.android.synthetic.main.activity_add_idea.toolbar
-import kotlinx.android.synthetic.main.content_add_event.*
 import kotlinx.android.synthetic.main.content_add_idea.*
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -41,7 +39,7 @@ class AddIdea : AppCompatActivity() {
         setContentView(R.layout.activity_add_idea)
         setSupportActionBar(toolbar)
 
-        val mAuth= FirebaseAuth.getInstance()
+        val mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser!!.email.toString()
 
         db.collection("users").document(user)
@@ -61,9 +59,9 @@ class AddIdea : AppCompatActivity() {
 
         btn_i_publish.setOnClickListener {
             uploadImage(user)
-            Toast.makeText(this, "Post publicado con exito.", Toast.LENGTH_SHORT).show()
-            finish()
+            Toast.makeText(this, "Post agregado correctamente.", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, SuccessActivity::class.java))
+            finish()
         }
 
         btn_i_cancel.setOnClickListener { finish() }
@@ -103,10 +101,23 @@ class AddIdea : AppCompatActivity() {
         val sdf = SimpleDateFormat("dd/M/yyyy")
         val currentDate = sdf.format(Date())
 
-        val idea = Idea(et_i_title.text.toString(), et_i_post.text.toString(), uri, currentDate, user)
+        val idea =
+            Idea(et_i_title.text.toString(), et_i_post.text.toString(), uri, currentDate, user)
 
         db.collection("ideas")
             .add(idea)
+
+        db.collection("users").document(user).collection("plants")
+            .get()
+            .addOnCompleteListener { task ->
+                for (document in task.result!!) {
+                    val plant = document.toObject(Plant::class.java)
+                    var level = plant.level + 1
+
+                    db.collection("users").document(user).collection("plants").document(document.id)
+                        .update("level", level)
+                }
+            }
     }
 
     private fun uploadImage(user: String) {
