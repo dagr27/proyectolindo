@@ -46,6 +46,7 @@ class IdeaFragment : Fragment() {
             startActivity(Intent(this.context, AddIdea::class.java))
             val ft = fragmentManager?.beginTransaction()
             ft?.replace(R.id.fragment, IdeaFragment())?.addToBackStack(null)?.commit()
+            activity?.finish()
         }
 
         db.collection("ideas").get()

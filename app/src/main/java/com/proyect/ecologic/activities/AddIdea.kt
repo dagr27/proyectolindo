@@ -63,6 +63,7 @@ class AddIdea : AppCompatActivity() {
             uploadImage(user)
             Toast.makeText(this, "Post publicado con exito.", Toast.LENGTH_SHORT).show()
             finish()
+            startActivity(Intent(this, SuccessActivity::class.java))
         }
 
         btn_i_cancel.setOnClickListener { finish() }
